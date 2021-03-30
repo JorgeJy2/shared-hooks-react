@@ -2,26 +2,29 @@ import React from 'react'
 import { useForm } from '../02-useEffect/hooks/useForm';
 import PropTypes from 'prop-types';
 
-export const AddTodo = React.memo(({ handlerAdd }) => {
-    console.log('CREATE ADD TODO :( ');
-    const [{ description }, handlerInputChange, resetForm] = useForm({
+// React.memo(
+export const AddTodo = ({ handlerAdd }) => {
+    const [ { description }, handleInputChange, reset ] = useForm({
         description: ''
     });
 
-    const handlearSubtmit = ($event) => {
-        $event.preventDefault();
-        if (description.trim().length > 0) {
-            handlerAdd({
-                id: new Date().getTime(),
-                describe: description,
-                done: false
-            });
-            resetForm();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if ( description.trim().length <= 1 ) {
+            return;
         }
-    };
+        handlerAdd( {
+            id: new Date().getTime(),
+            describe: description,
+            done: false
+        } );
+        reset();
+        
+    }
 
     return (
-        <form className="form-add" onSubmit={handlearSubtmit}>
+        <form className="form-add" onSubmit={handleSubmit}>
             <p>Add todo</p>
             <hr />
             <input
@@ -30,7 +33,7 @@ export const AddTodo = React.memo(({ handlerAdd }) => {
                 placeholder="Todo description"
                 name="description"
                 value={description}
-                onChange={handlerInputChange}
+                onChange={handleInputChange}
             />
             <button
                 className="btn btn-primary mt-5"
@@ -40,7 +43,6 @@ export const AddTodo = React.memo(({ handlerAdd }) => {
         </form>
     )
 }
-)
 
 
 AddTodo.propTypes = {

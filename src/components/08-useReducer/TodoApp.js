@@ -17,10 +17,7 @@ export const TodoApp = () => {
 
     const [todos, dispatch] = useReducer(todoReducer, [], init);
 
-    console.log(todos);
-
     useEffect(() => localStorage.setItem('todos', JSON.stringify(todos)), [todos])
-
 
     const handlerDelete = (id) =>
         dispatch({

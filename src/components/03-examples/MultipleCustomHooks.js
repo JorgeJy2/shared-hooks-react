@@ -19,7 +19,7 @@ export const MultipleCustomHooks = () => {
         <>
             <h1>Custom hooks</h1>
             <hr/>
-            { error &&  <div className="alert alert-danger text-center" id="loading">Error</div> }
+            { error &&  <div className="alert alert-danger text-center">Error</div> }
             {loading ? 
                 <div className="alert alert-info text-center" id="loading">Loading . . .</div>
                 :

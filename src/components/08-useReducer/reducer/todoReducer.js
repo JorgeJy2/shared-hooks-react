@@ -10,7 +10,8 @@ export const todoReducer = (state = [], action) => {
                     ? { ...todo, done: !todo.done }
                     : todo);
         default:
-            throw new Error();
+            return state;
+            // throw new Error();
     }
 };
 

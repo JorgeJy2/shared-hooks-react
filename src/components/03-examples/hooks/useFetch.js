@@ -15,7 +15,7 @@ export const useFetch = (url) => {
         fetch(url)
             .then(resp => resp.json())
             .then(data => {
-                console.log(isMounted.current);
+                // console.log(isMounted.current);
 
                 if (isMounted.current) {
                     setstate({
@@ -30,7 +30,7 @@ export const useFetch = (url) => {
                     setstate({
                         data: null,
                         loading: false,
-                        error: error
+                        error: `Cant get, ${error}`
                     });
 
                 }

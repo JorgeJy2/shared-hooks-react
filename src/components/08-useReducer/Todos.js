@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Todo } from './Todo';
 
 export const Todos = ({ todos, handlerToggle, handlerDelete }) => {
-    console.log('CREATE TODO :( ');
     return (
         <ul className="list-group list-group-flush">
             {
