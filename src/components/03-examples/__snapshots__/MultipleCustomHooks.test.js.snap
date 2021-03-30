@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test MultipleCustomHooks  wrapper  1`] = `
+<Fragment>
+  <h1>
+    Custom hooks
+  </h1>
+  <hr />
+  <div
+    className="alert alert-info text-center"
+    id="loading"
+  >
+    Loading . . .
+  </div>
+</Fragment>
+`;

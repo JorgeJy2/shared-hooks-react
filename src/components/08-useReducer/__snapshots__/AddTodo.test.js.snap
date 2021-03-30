@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <TodoAdd /> should snapshot 1`] = `
+<form
+  className="form-add"
+  onSubmit={[Function]}
+>
+  <p>
+    Add todo
+  </p>
+  <hr />
+  <input
+    className="form-control"
+    name="description"
+    onChange={[Function]}
+    placeholder="Todo description"
+    type="text"
+    value=""
+  />
+  <button
+    className="btn btn-primary mt-5"
+    type="submit"
+  >
+    Add todo
+  </button>
+</form>
+`;

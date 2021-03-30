@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` should snapshot 1`] = `
+<li
+  className="list-group-item"
+  key="1"
+>
+  <p
+    className="false  "
+    onClick={[Function]}
+  >
+     
+    2
+    . 
+    Learn react
+  </p>
+  <button
+    className="btn btn-outline-danger"
+    onClick={[Function]}
+  >
+    x
+  </button>
+</li>
+`;

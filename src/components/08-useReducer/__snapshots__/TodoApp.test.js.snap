@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`todo app test should snapshot 1`] = `
+<Fragment>
+  <h1>
+    Todo app 
+    <small>
+      0
+    </small>
+     
+  </h1>
+  <hr />
+  <Todos
+    handlerDelete={[Function]}
+    handlerToggle={[Function]}
+    todos={Array []}
+  />
+  <AddTodo
+    handlerAdd={[Function]}
+  />
+</Fragment>
+`;
